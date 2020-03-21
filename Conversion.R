@@ -2,17 +2,18 @@
 
 library(raster)
 require(ncdf4)
+require(rgdal)
 
 ## Input: a netCDF file
-file.nc <- "C:/LEARNING(2020)/RESEARCH_WORK/data/NTL/ntl.nc"
+file.nc <- "C:/LEARNING(2020)/RESEARCH_WORK/data/NTL/VNP02DNB_NRT.A2020057.1242.001.nc"
 
 ## Output: a GeoTIFF file
-file.tiff <- 'C:/LEARNING(2020)/RESEARCH_WORK/data/NTL/ntl.tiff'
+file.tiff <- 'C:/LEARNING(2020)/RESEARCH_WORK/data/NTL/nt2.tiff'
 
 ## Import netCDF
-r.night_light_imagery <- raster(file.nc)
+r.rain <- raster(file.nc)
 
 ## Save to disk as GeoTIFF
-writeRaster(night_light_imagery, filename = file.tiff, format = 'GTiff', overwrite = T)
+writeRaster(r.rain, filename = file.tiff, format = 'GTiff',options="INTERLEAVE=BAND", overwrite = TRUE)
 
 
