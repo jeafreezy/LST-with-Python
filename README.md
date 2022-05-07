@@ -1,2 +1,3 @@
-# An-Improved-Methodology-for-Locating-and-Ranking-Public-Landfill-Sites-at-a-Regional-Scale
-Codes for my final year project
+# LST with Python
+  An attempt to automate LST creation with python using Radiative Trasfer Approach
+  Codes for my final year project
